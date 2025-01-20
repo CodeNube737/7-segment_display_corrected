@@ -1,0 +1,58 @@
+// Output combinational logic for 7-seg with led's a-g and dp(.)
+assign {a,b,c,d,e,f,g} =
+      7'h3f :               // 0, binary: 0111111
+      7'h06 :               // 1, binary: 0000110
+      7'h5b :               // 2, binary: 1011011
+      7'h4f :               // 3, binary: 1001111
+
+      7'h66 :               // 4, binary: 1100110
+      7'h6d :               // 5, binary: 1101101
+      7'h7d :               // 6, binary: 1111101
+
+      7'h07 :               // 7, binary: 0000111
+      7'h7f :               // 8, binary: 1111111
+      7'h6f :               // 9, binary: 1101111
+
+
+/* E7660 leds (7-segment display)
+ * 
+ * xxx xxx1 (top)
+ * xxx xx1x (top right)
+ * xxx x1xx (bot right)
+ * xxx 1xxx (bottom)
+ * xx1 xxxx (bot left)
+ * x1x xxxx (top left)
+ * 1xx xxxx (centre)
+ * 1xxxxxxx (dp)
+ */
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// Output combinational logic
+   assign {a,b,c,d,e,f,g} =
+      7'h7e :               // 0, binary: 1111110
+      7'h30 :               // 1, binary: 0110000
+      7'h6d :               // 2, binary: 1101101
+      7'h79 :               // 3, binary: 1111001
+
+      7'h33 :               // 4, binary: 0110011
+      7'h5b :               // 5, binary: 1011011
+      7'h5f :               // 6, binary: 1011111
+
+      7'h70 :               // 7, binary: 1110000
+      7'h7f :               // 8, binary: 1111111
+      7'h7b :               // 9, binary: 1111011
+
+
+/*
+ * E2117 leds
+ * 
+ * xxx xxx1 (centre)
+ * xxx xx1x (top left)
+ * xxx x1xx (bot left)
+ * xxx 1xxx (bottom)
+ * xx1 xxxx (bot right)
+ * x1x xxxx (top right)
+ * 1xx xxxx (top)
+ */
+
