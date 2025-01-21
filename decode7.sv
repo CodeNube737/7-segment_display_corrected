@@ -10,14 +10,14 @@ module decode7 (
 );
 always_comb begin
     case (num) // here u send info to display the physical number on the led array
-      4'h0: leds = 7'b0111111;	// Display the number 0 ...... displays the ctr-led instead of the top
+      4'h0: leds = 7'b0111111;	// Display the number 0 
       4'h1: leds = 7'b0000110;	// Display the number 1
       4'h2: leds = 7'b1011011;	// Display the number 2
       4'h3: leds = 7'b1001111;	// Display the number 3
-      4'h4: leds = 7'b1100110;	// Display the number 4 ...... is currently displaying a 7
+      4'h4: leds = 7'b1100110;	// Display the number 4 
       4'h5: leds = 7'b1101101;	// Display the number 5
       4'h6: leds = 7'b1111101;	// Display the number 6
-      4'h7: leds = 7'b0000111;	// Display the number 7 ...... displays the ctr-led instead of the top
+      4'h7: leds = 7'b0000111;	// Display the number 7 
       4'h8: leds = 7'b1111111;	// Display the number 8
       4'h9: leds = 7'b1101111;	// Display the number 9
 //      4'hA: leds = 8'b10001000;	// Display the letter A
